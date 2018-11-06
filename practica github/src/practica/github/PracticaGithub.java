@@ -33,15 +33,21 @@ public class PracticaGithub {
             cadena=sc.nextLine();
             cadena=cadena.toUpperCase();
             con=0;
-            for (int i=0;i<cadena.length();i++)
-                 if (cadena.charAt(i)==caracter)
-                     con++;
+            con = pepito(cadena, caracter);
             System.out.println("se han anotado: "+con+" veces el caracter: "+caracter);
             System.out.println("¿deseas escribir otra?");
             seguir=sc.nextBoolean();
             sc.nextLine();
         }
         while (seguir==true);
+    }
+
+    public static int pepito(String cadena, char caracter) {
+        int con=0;
+        for (int i=0;i<cadena.length();i++)
+            if (cadena.charAt(i)==caracter)
+                con++;
+        return con;
     }
     
 }
